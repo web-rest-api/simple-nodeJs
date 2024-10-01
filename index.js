@@ -12,11 +12,6 @@ const users = [
 	{ id: 5, firstName: "Charlie", lastName: "Davis", role: "admin" },
 ]
 
-console.log(users);
-
-
-
-
 // envoyer les utilisateurs en réponse
 app.get("/", (req, res) => {
 	res.json(users)
@@ -32,7 +27,12 @@ app.post("/", (req, res) => {
 		role,
 	}
 
-	res.json(newUser)
+	const lastUserId = users[users.length - 1].id
+	const newId = lastUserId + 1
+
+	newUser.id = newId
+
+	res.status(201).json(newUser)
 })
 
 app.listen(port, () => {
