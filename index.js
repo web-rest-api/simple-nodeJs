@@ -4,17 +4,30 @@ const port = 3000
 
 app.use(express.json())
 
+const users = [
+	{ id: 1, firstName: "John", lastName: "Doe", role: "admin" },
+	{ id: 2, firstName: "Jane", lastName: "Smith", role: "user" },
+	{ id: 3, firstName: "Alice", lastName: "Johnson", role: "moderator" },
+	{ id: 4, firstName: "Bob", lastName: "Brown", role: "user" },
+	{ id: 5, firstName: "Charlie", lastName: "Davis", role: "admin" },
+]
+
+// envoyer les utilisateurs en réponse
 app.get("/", (req, res) => {
-    res.json({
-        msg: "hello from API"
-    })
+	res.json(users)
 })
 
 app.post("/", (req, res) => {
-    console.log(req.body);
-    
+	const { firstName, lastName, role } = req.body
+
+	const newUser = {
+		firstName,
+		lastName,
+		role,
+	}
+
 	res.json({
-		msg: "ici le post !!!",
+		newUser,
 	})
 })
 
