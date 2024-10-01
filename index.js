@@ -12,11 +12,17 @@ const users = [
 	{ id: 5, firstName: "Charlie", lastName: "Davis", role: "admin" },
 ]
 
+console.log(users);
+
+
+
+
 // envoyer les utilisateurs en réponse
 app.get("/", (req, res) => {
 	res.json(users)
 })
 
+// créer un nouvel utilisateur
 app.post("/", (req, res) => {
 	const { firstName, lastName, role } = req.body
 
@@ -26,9 +32,7 @@ app.post("/", (req, res) => {
 		role,
 	}
 
-	res.json({
-		newUser,
-	})
+	res.json(newUser)
 })
 
 app.listen(port, () => {
