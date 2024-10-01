@@ -10,6 +10,14 @@ app.get("/", (req, res) => {
     })
 })
 
+app.post("/", (req, res) => {
+    console.log(req.body);
+    
+	res.json({
+		msg: "ici le post !!!",
+	})
+})
+
 app.listen(port, () => {
 	console.log(`Serveur en cours d'exécution sur http://localhost:${port}`)
 })
