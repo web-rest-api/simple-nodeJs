@@ -6,6 +6,16 @@ It performs all CRUD operations using localhost port 3000
 
 All methods are accepted in the home directory "/"
 
+## Getting started
+
+You can clone/fork this repo, open a terminal on your working directory and run
+
+```bash
+npm i
+```
+
+to install all dependencies: So far, express and nodemon for hot reloading
+
 ## Endpoints:
 
 `http://localhost:3000`
