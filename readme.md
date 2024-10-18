@@ -23,9 +23,9 @@ to install all dependencies: So far, express and nodemon for hot reloading
 ### Methods:
 
 - GET: will send all the users store in a local variable "users"
-- PUT: will update a user based on the paremeter id sent in the url ex: `http://localhost:3000/2`
+- PUT: will update a user based on the parameter id sent in the url ex: `http://localhost:3000/2`
 - POST: will create a user based on the data sent in the body (fistName and lastName). It'll send a 201 status code if successful
-- DELETE: will delete a suer based on the url's param
+- DELETE: will delete a suer based on the url's param. ex: `http://localhost:3000/2`
 
 ## Error codes
 
